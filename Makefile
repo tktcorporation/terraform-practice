@@ -18,4 +18,4 @@ show:
 deploy: init plan apply show
 
 destroy:
-	terraform destroy
+	terraform destroy -var-file=$(env).tfvars
