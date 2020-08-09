@@ -19,7 +19,7 @@ resource "aws_subnet" "public_subnet_a" {
   availability_zone = "${var.aws_region}a"
 
   tags = {
-    Name    = "${var.project_prefix}-${var.stage}-public-subnet-a"
+    Name    = "${var.project_name}-${var.stage}-public-subnet-a"
     Env     = var.stage
     Project = var.project_name
   }
@@ -32,7 +32,7 @@ resource "aws_subnet" "public_subnet_c" {
   availability_zone = "${var.aws_region}c"
 
   tags = {
-    Name    = "${var.project_prefix}-${var.stage}-public-subnet-c"
+    Name    = "${var.project_name}-${var.stage}-public-subnet-c"
     Env     = var.stage
     Project = var.project_name
   }
@@ -45,7 +45,7 @@ resource "aws_subnet" "private_subnet_a" {
   availability_zone = "${var.aws_region}a"
 
   tags = {
-    Name    = "${var.project_prefix}-${var.stage}-private-subnet-a"
+    Name    = "${var.project_name}-${var.stage}-private-subnet-a"
     Env     = var.stage
     Project = var.project_name
   }
@@ -58,7 +58,7 @@ resource "aws_subnet" "private_subnet_c" {
   availability_zone = "${var.aws_region}c"
 
   tags = {
-    Name    = "${var.project_prefix}-${var.stage}-private-subnet-c"
+    Name    = "${var.project_name}-${var.stage}-private-subnet-c"
     Env     = var.stage
     Project = var.project_name
   }
