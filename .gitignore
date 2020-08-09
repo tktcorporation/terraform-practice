@@ -1,9 +1,12 @@
+# direnv
+.envrc
+
 # Local .terraform directories
 **/.terraform/*
 
 # .tfstate files
-*.tfstate
-*.tfstate.*
+# *.tfstate
+# *.tfstate.*
 
 # Crash log files
 crash.log
