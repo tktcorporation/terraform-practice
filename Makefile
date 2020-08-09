@@ -4,18 +4,18 @@ clean:
 	rm -rf ./.terraform
 
 init:
-	cd envs/$(env) && docker-compose run --rm tf init
+	docker-compose run --rm tf init envs/$(env)
 
 plan:
-	cd envs/$(env) && docker-compose run --rm tf plan -var-file=$(env).tfvars
+	docker-compose run --rm tf plan -var-file=./envs/$(env).tfvars envs/$(env)
 
 apply:
-	cd envs/$(env) && docker-compose run --rm tf apply -var-file=$(env).tfvars
+	docker-compose run --rm tf apply -var-file=./envs/$(env).tfvars envs/$(env)
 
 show:
-	cd envs/$(env) && docker-compose run --rm show
+	docker-compose run --rm tf show
 
 deploy: init plan apply show
 
 destroy:
-	cd envs/$(env) && docker-compose run --rm tf destroy -var-file=$(env).tfvars
+	docker-compose run --rm tf destroy -var-file=./envs/$(env).tfvars envs/$(env)
